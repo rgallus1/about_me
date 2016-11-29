@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>About Yana</title>
+   <title>About Rose Anne</title>
    <link rel="stylesheet" href="style.css">
  </head>
  <body>
-   <h1>About Yana</h1>
+   <h1>About Rose Anne</h1>
    <p>more content here</p>
    <script src="app.js"</script>
  </body>

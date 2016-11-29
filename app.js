@@ -5,7 +5,7 @@ Useful and descriptive console.log() messages in the JS are well written and cor
 Use CSS to style your page as you see fit, to the level of abilities in CSS that you currently have
 Add, Commit, Push process is being followed; evident in GitHub that commits are made regularly, and with good commit messages.
 
-var question1 = prompt('Does Rose Anne have any hobbies?').toLowerCase();
+var response1 = prompt('Does Rose Anne have any hobbies?').toLowerCase();
 
 //if (condition is true) {
 //  do something;
@@ -16,9 +16,9 @@ var question1 = prompt('Does Rose Anne have any hobbies?').toLowerCase();
 //  and maybe yet another thing;
 //}
 
-If (question1 === 'yes' || question1 === 'y') {
+If (response1 === 'yes' || response1 === 'y') {
   alert('Yes, Rose Anne does have hobbies!');
-} else if (question1 === 'no' || question1 === 'n')
+} else if (response1 === 'no' || response1 === 'n')
   alert('Sorry Rose Anne doesn\'t have any hobbies!');
 } else {
   alert('Please enter a yes/y or no/n');
