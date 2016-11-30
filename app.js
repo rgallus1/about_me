@@ -98,3 +98,55 @@ else {
   console.log('The user didn\'t answer yes or no.');
   console.log(response5);
 }
+
+// var samsPets = ['Buddy', 'Alistair', 'Trillian', 'Demi', 'Parker'];
+// //
+// for (var i = 0; i < samsPets.length; i++) {
+//   console.log(samsPets[i]);
+// }
+
+// p.176 	Using ‘while’ loops
+//var nadia = 0;
+//while (nadia !== 26) {
+  //nadia = parseInt(prompt('How old is Nadia?'));
+//}
+//console.log('Nadia is awesome');
+
+// var counter = 0;
+// while(counter < samsPets.length) {
+//   console.log(samsPets[counter]);
+//   counter += 1;
+// }
+//Question Number 6 to User Asking about Favorite Number
+alert('For the next question we ask, please provide numbers only in your response');
+var roseAnnesFavoriteNum = 6;
+var response6Counter = 1;
+
+
+while (response6Counter <= 4) {
+  var response6 = prompt('What is Rose Anne\'s favoirite number?');
+  console.log(response6Counter);
+  console.log(response6);
+  console.log(roseAnnesFavoriteNum);
+  if (parseInt(response6) > roseAnnesFavoriteNum) {
+    alert('The number you guessed is too high');
+    console.log('Rose Anne\'s favorite number.');
+    console.log(roseAnnesFavoriteNum);
+    console.log(response6);
+    response6Counter += 1;
+  }
+  else if (parseInt(response6) < roseAnnesFavoriteNum) {
+    alert('The number you guessed is too low');
+    console.log('Rose Anne\'s favorite number.');
+    console.log(roseAnnesFavoriteNum);
+    console.log(response6);
+    response6Counter += 1;
+  }
+  else {
+    alert('You guessed the right number! Yippee!');
+    console.log('Rose Anne\'s favorite number.');
+    console.log(roseAnnesFavoriteNum);
+    console.log(response6);
+    response6Counter = 5;
+  }
+}
