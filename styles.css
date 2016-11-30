@@ -2,6 +2,10 @@
 outline: 1px dotted orange;
 color: blue;
 }
-#header {
+h2 {
   background-color:lightblue;
+  margin-left: 20px;
 }
+  p {
+    margin-left: 20px;
+    }

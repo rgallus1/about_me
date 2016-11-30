@@ -6,6 +6,9 @@
 // Use CSS to style your page as you see fit, to the level of abilities in CSS that you currently have
 // Add, Commit, Push process is being followed; evident in GitHub that commits are made regularly, and with good commit messages.//*
 
+var username = prompt('Hello, what is your name?');
+alert('Hello ' + username + ' and welcome to a guessing game about Rose Anne');
+
 var response1 = prompt('Does Rose Anne have any hobbies?').toLowerCase();
 
 if (response1 === 'yes' || response1 === 'y') {
@@ -23,3 +26,37 @@ else {
   console.log('The user didn\'t answer yes or no.');
   console.log(response1);
 }
+var response2 = prompt('Do you know if Rose Anne likes to travel?').toUpperCase();
+
+if (response2 === 'YES' || response2 === 'Y') {
+  alert('Yes, Rose Anne does like to travel!');
+  console.log('Does Rose Anne like to travel?');
+  console.log(response2);
+}
+else if (response2 === 'NO' || response2 === 'N') {
+  alert('Sorry Rose Anne doesn\'t like to travel!');
+  console.log('Does Rose Anne like to travel?');
+  console.log(response2);
+}
+else {
+  alert('Please enter a YES/Y or NO/N');
+  console.log('The user didn\'t answer yes or no.');
+  console.log(response2);
+}
+
+
+var response3 = prompt('Do you know if Rose Anne likes to sing?').toUpperCase();
+
+if (response3 === 'YES' || response3 === 'Y') {
+  alert('Yes, Rose Anne does like to sing!');
+  console.log('Does Rose Anne like to something?');
+  console.log(response2);
+}
+else if (response3 === 'NO' || response3 === 'N') {
+  alert('Sorry Rose Anne doesn\'t like to sing!');
+  console.log('Does Rose Anne like to sing?');
+  console.log(response3);
+}
+else {
+  alert('Please enter a YES/Y or NO/N');
+  console.log('The user didn\'t answer YES or NO.');
