@@ -2,10 +2,19 @@
 outline: 1px dotted orange;
 color: blue;
 }
+
+h1{
+  text-align:center
+}
+
 h2 {
   background-color:lightblue;
   margin-left: 20px;
 }
+
   p {
     margin-left: 20px;
+    margin-right: 40px
+    font-size: 15px;
+    font-family: Verdana, sans-serif;
     }

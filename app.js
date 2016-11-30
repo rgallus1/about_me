@@ -1,11 +1,7 @@
 'use strict';
-/* always use this */
-// //Design a guessing game about you that involves FIVE yes/no questions. Be creative and fun and whimsical. Or not. It's up to you! It's your project!
-// The questions in the guessing game must require a mix of yes/no answers, and user input must accept either y/n or yes/no responses, with either .toUpperCase() or .toLowerCase() used to validate the user input and accommodate users entering all-caps Y/N or YES/NO answers, too.
-// Useful and descriptive console.log() messages in the JS are well written and correctly displaying to the browser console for each question of the guessing game.
-// Use CSS to style your page as you see fit, to the level of abilities in CSS that you currently have
-// Add, Commit, Push process is being followed; evident in GitHub that commits are made regularly, and with good commit messages.//*
 
+//This code prompts the User asking 5 questions about Rose Anne
+//Question Number 1 to User Asking about Hobbies
 var username = prompt('Hello, what is your name?');
 alert('Hello ' + username + ' and welcome to a guessing game about Rose Anne');
 
@@ -26,6 +22,8 @@ else {
   console.log('The user didn\'t answer yes or no.');
   console.log(response1);
 }
+
+//Question Number 2 to User Asking about Dancing
 var response2 = prompt('Do you know if Rose Anne likes to travel?').toUpperCase();
 
 if (response2 === 'YES' || response2 === 'Y') {
@@ -44,7 +42,7 @@ else {
   console.log(response2);
 }
 
-
+//Question Number 4 to User Asking about Dancing
 var response3 = prompt('Do you know if Rose Anne likes to sing?').toUpperCase();
 
 if (response3 === 'YES' || response3 === 'Y') {
@@ -60,3 +58,42 @@ else if (response3 === 'NO' || response3 === 'N') {
 else {
   alert('Please enter a YES/Y or NO/N');
   console.log('The user didn\'t answer YES or NO.');
+}
+
+//Question Number 4 to User Asking about Dancing
+var response4 = prompt('Does Rose Anne Dance?').toLowerCase();
+
+if (response4 === 'yes' || response4 === 'y') {
+  alert('Yes, Rose Anne dances!');
+  console.log('Does Rose Anne dance?');
+  console.log(response4);
+}
+else if (response4 === 'no' || response4 === 'n') {
+  alert('Sorry Rose Anne doesn\'t dance!');
+  console.log('Does Rose Anne dance?');
+  console.log(response4);
+}
+else {
+  alert('Please enter a yes/y or no/n');
+  console.log('The user didn\'t answer yes or no.');
+  console.log(response4);
+}
+
+//Question Number 5 to User Asking about Yodeling
+var response5 = prompt('Does Rose Anne yodel?').toLowerCase();
+
+if (response5 === 'yes' || response5 === 'y') {
+  alert('Yes, Rose Anne yodels!');
+  console.log('Does Rose Anne yodel?');
+  console.log(response5);
+}
+else if (response5 === 'no' || response5 === 'n') {
+  alert('Sorry Rose Anne doesn\'t yodel!');
+  console.log('Does Rose Anne yodel?');
+  console.log(response5);
+}
+else {
+  alert('Please enter a yes/y or no/n');
+  console.log('The user didn\'t answer yes or no.');
+  console.log(response5);
+}
