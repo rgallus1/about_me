@@ -4,6 +4,7 @@
 //Question Number 1 to User Asking about Hobbies
 var username = prompt('Hello, what is your name?');
 alert('Hello ' + username + ' and welcome to a guessing game about Rose Anne');
+alert('We will be asking you a series of questions, please answer with a yes/y or no/n');
 
 var response1 = prompt('Does Rose Anne have any hobbies?').toLowerCase();
 
