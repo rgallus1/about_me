@@ -135,27 +135,31 @@ while (response6Counter <= 4) {
 
 //Question Number 7 to User Asking about Where Rose Anne lives
 
-var roseAnnesStates = ['Michigan', 'Washington', 'Virgina', 'Ohio', 'Florida'];
+var roseAnnesStates = ['MICHIGAN', 'WASHINGTON', 'VIRGINIA', 'OHIO', 'FLORIDA'];
 var correctAnswer = 0;
-var wrongAnswer = 0;
+//var wrongAnswer = 0;
 var totalTalley = 0;
 var guessCounter = 0;
 
 while (guessCounter <= 6) {
-  var response7 = prompt('Can you guess what state Rose Anne has lived in?');
+  guessCounter +=1;
+  var response7 = prompt('Can you guess what state Rose Anne has lived in?').toUpperCase();
   console.log(response7);
-  for (var i = 0; i <= roseAnnesStates.length; i++) {
+  for (var i = 0; i < roseAnnesStates.length; i++) {
     if (response7 !== roseAnnesStates[i]) {
       console.log(roseAnnesStates[i]);
-      guessCounter += 1;
-      wrongAnswer +=1;
+      console.log('Guess Counter' + guessCounter);
+    //  wrongAnswer += 1;
+    //  console.log('Wrong Answer' + wrongAnswer);
     }
-    else {
-      guessCounter += 1;
+    else if (response7 === roseAnnesStates[i]) {
+      console.log('guess counter' + guessCounter);
       correctAnswer += 1;
+      console.log('correct answer' + correctAnswer);
     }
   }
 }
-totalTalley = wrongAnswer + correctAnswer;
-alert('These are the states that Rose Anne has lived in' + roseAnnesStates);
-alert('Hey ' + username + 'You have gotten ' + correctAnswer + 'out of ' + totalTalley + ' guesses correct');
+//totalTalley correctAnswer;
+console.log('Total Tally' + totalTalley);
+alert('These are the states that Rose Anne has lived in ' + roseAnnesStates);
+alert('Hey ' + username + ' You have gotten ' + correctAnswer + 'out of ' + guessCounter + ' guesses correct');
