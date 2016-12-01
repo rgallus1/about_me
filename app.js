@@ -125,7 +125,7 @@ while (response6Counter <= 4) {
     response6Counter += 1;
   }
   else {
-    alert('You guessed the right number! Yippee!');
+    alert('You either guessed the right number or you didn\'t enter a number!');
     console.log('Rose Anne\'s favorite number.');
     console.log(roseAnnesFavoriteNum);
     console.log(response6);
@@ -137,29 +137,33 @@ while (response6Counter <= 4) {
 
 var roseAnnesStates = ['MICHIGAN', 'WASHINGTON', 'VIRGINIA', 'OHIO', 'FLORIDA'];
 var correctAnswer = 0;
-//var wrongAnswer = 0;
 var totalTalley = 0;
 var guessCounter = 0;
+var guessHolder = 0;
 
-while (guessCounter <= 6) {
-  guessCounter +=1;
-  var response7 = prompt('Can you guess what state Rose Anne has lived in?').toUpperCase();
-  console.log(response7);
-  for (var i = 0; i < roseAnnesStates.length; i++) {
-    if (response7 !== roseAnnesStates[i]) {
-      console.log(roseAnnesStates[i]);
-      console.log('Guess Counter' + guessCounter);
-    //  wrongAnswer += 1;
-    //  console.log('Wrong Answer' + wrongAnswer);
-    }
-    else if (response7 === roseAnnesStates[i]) {
-      console.log('guess counter' + guessCounter);
-      correctAnswer += 1;
-      console.log('correct answer' + correctAnswer);
-    }
+//The following code loop allows the user to guess where Rose Anne live 6 times
+//and if the user guesses correctly or uses all their guess attempts.
+guessCounter +=1;
+var response7 = prompt('Can you guess what state Rose Anne has lived in?').toUpperCase();
+console.log(response7);
+for (var i = 0; i < roseAnnesStates.length; i++) {
+  if (response7 !== roseAnnesStates[i]) {
+    console.log(roseAnnesStates[i]);
+    console.log('Guess Counter' + guessCounter);
+  }
+  else if (response7 === roseAnnesStates[i]) {
+    console.log('guess counter' + guessCounter);
+    correctAnswer += 1;
+    console.log('correct answer' + correctAnswer);
+    guessHolder = guessCounter;
+    console.log('guess holder' + guessHolder);
+    guessCounter = 7;
+    break;
   }
 }
-//totalTalley correctAnswer;
+
+//totalTalley of guesses;
+totalTalley = guessHolder;
 console.log('Total Tally' + totalTalley);
 alert('These are the states that Rose Anne has lived in ' + roseAnnesStates);
-alert('Hey ' + username + ' You have gotten ' + correctAnswer + 'out of ' + guessCounter + ' guesses correct');
+alert('Hey ' + username + ' You have gotten ' + correctAnswer + ' out of ' + totalTalley + ' guesses correct');
