@@ -99,30 +99,12 @@ else {
   console.log(response5);
 }
 
-// var samsPets = ['Buddy', 'Alistair', 'Trillian', 'Demi', 'Parker'];
-// //
-// for (var i = 0; i < samsPets.length; i++) {
-//   console.log(samsPets[i]);
-// }
-
-// p.176 	Using ‘while’ loops
-//var nadia = 0;
-//while (nadia !== 26) {
-  //nadia = parseInt(prompt('How old is Nadia?'));
-//}
-//console.log('Nadia is awesome');
-
-// var counter = 0;
-// while(counter < samsPets.length) {
-//   console.log(samsPets[counter]);
-//   counter += 1;
-// }
 //Question Number 6 to User Asking about Favorite Number
 alert('For the next question we ask, please provide numbers only in your response');
 var roseAnnesFavoriteNum = 6;
 var response6Counter = 1;
 
-
+//This while loops until the user guesses the correct answer with a maximum of 4 attempts
 while (response6Counter <= 4) {
   var response6 = prompt('What is Rose Anne\'s favoirite number?');
   console.log(response6Counter);
@@ -150,3 +132,30 @@ while (response6Counter <= 4) {
     response6Counter = 5;
   }
 }
+
+//Question Number 7 to User Asking about Where Rose Anne lives
+
+var roseAnnesStates = ['Michigan', 'Washington', 'Virgina', 'Ohio', 'Florida'];
+var correctAnswer = 0;
+var wrongAnswer = 0;
+var totalTalley = 0;
+var guessCounter = 0;
+
+while (guessCounter <= 6) {
+  var response7 = prompt('Can you guess what state Rose Anne has lived in?');
+  console.log(response7);
+  for (var i = 0; i <= roseAnnesStates.length; i++) {
+    if (response7 !== roseAnnesStates[i]) {
+      console.log(roseAnnesStates[i]);
+      guessCounter += 1;
+      wrongAnswer +=1;
+    }
+    else {
+      guessCounter += 1;
+      correctAnswer += 1;
+    }
+  }
+}
+totalTalley = wrongAnswer + correctAnswer;
+alert('These are the states that Rose Anne has lived in' + roseAnnesStates);
+alert('Hey ' + username + 'You have gotten ' + correctAnswer + 'out of ' + totalTalley + ' guesses correct');
