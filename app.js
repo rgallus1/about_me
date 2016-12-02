@@ -48,7 +48,7 @@ var response3 = prompt('Do you know if Rose Anne likes to sing?').toUpperCase();
 
 if (response3 === 'YES' || response3 === 'Y') {
   alert('Yes, Rose Anne does like to sing!');
-  console.log('Does Rose Anne like to something?');
+  console.log('Does Rose Anne like to sing?');
   console.log(response2);
 }
 else if (response3 === 'NO' || response3 === 'N') {
@@ -62,10 +62,10 @@ else {
 }
 
 //Question Number 4 to User Asking about Dancing
-var response4 = prompt('Does Rose Anne Dance?').toLowerCase();
+var response4 = prompt('Does Rose Anne like to Dance?').toLowerCase();
 
 if (response4 === 'yes' || response4 === 'y') {
-  alert('Yes, Rose Anne dances!');
+  alert('Yes, Rose Anne does like to dance!');
   console.log('Does Rose Anne dance?');
   console.log(response4);
 }
