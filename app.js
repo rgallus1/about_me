@@ -154,37 +154,34 @@ var username = prompt('Hello, what is your name?');
 //Question Number 7 to User Asking about Where Rose Anne lives
 function question7() {
   var roseAnnesStates = ['MICHIGAN', 'WASHINGTON', 'VIRGINIA', 'OHIO', 'FLORIDA'];
-  var correctAnswer = 0;
+  var correctAnswer = false;
   var totalTalley = 0;
   var guessCounter = 0;
   //var guessHolder = 0;
   //The following code loop allows the user to guess where Rose Anne live 6 times
   //and if the user guesses correctly or uses all their guess attempts.
-  var response7 = prompt('Can you guess what state Rose Anne has lived in?').toUpperCase();
-  while (correctAnswer === 0 || guessCounter <= 6) {
 
+  var response7 = prompt('Can you guess what state Rose Anne has lived in?').toUpperCase();
+  while (correctAnswer === false && guessCounter <= 6) {
+    totalTalley += 1;
+    guessCounter += 1;
+    if (correctAnswer === false && guessCounter > 1) {
+      response7 = prompt('Can you guess what state Rose Anne has lived in?').toUpperCase();
+    }
     for (var i = 0; i < roseAnnesStates.length; i++) {
       if (response7 === roseAnnesStates[i]) {
-        totalTalley += 1;
-        correctAnswer += 1;
-        guessCounter = 7;
-        console.log('guess counter' + guessCounter);
-        console.log('correct answer' + correctAnswer);
+        correctAnswer = true;
         alert('That is correct, Rose Anne lives in ' + response7);
         break;
       }
-      else {
-        alert('That is incorrect, try again.');
-        guessCounter += 1;
-        totalTalley += 1;
-        break;
-      }
+    }
+    if (correctAnswer === false) {
+      alert('This is incorrect, try again!');
     }
   }
-  //totalTalley of guesses;
-  // console.log('Total Tally' + totalTalley);
   alert('These are the states that Rose Anne has lived in ' + roseAnnesStates);
   alert('Hey ' + username + ' You have gotten ' + correctAnswer + ' out of ' + totalTalley + ' guesses correct');
 }
-
+  //totalTalley of guesses;/ljdfkjlakjdlfjk
+  // console.log('Total Tally' + totalTalley);
 question7();
