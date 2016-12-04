@@ -1,7 +1,7 @@
 'use strict';
 
 //This code prompts the User asking 5 questions about Rose Anne
-//Question Number 1 to User Asking about Hobbies
+//Question Number 1 to User Asking about Rose Annes Hobbies
 var username = prompt('Hello, what is your name?');
 var rightAnswer = 0;
 alert('Hello ' + username + ' and welcome to a guessing game about Rose Anne');
